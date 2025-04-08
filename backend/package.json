@@ -1,5 +1,5 @@
 {
-  "name": "course-app",
+  "name": "KmowledgePlus",
   "version": "1.0.0",
   "description": "full stack course-selling-app",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "keywords": [
     "course-app"
   ],
-  "author": "Akhil K",
+  "author": "Pramit sarkar",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
