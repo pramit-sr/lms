@@ -97,6 +97,12 @@ function Login() {
             Register Now
           </Link>
         </p>
+        <p className="text-xs text-center mt-2 text-gray-400">
+          Admin ?{" "}
+          <Link to="/admin/signup" className="text-green-400 hover:text-green-300">
+            Register Now
+          </Link>
+        </p>
 
         <p className="text-xs text-center mt-2 text-gray-400">
           By logging in, you agree to our{" "}
