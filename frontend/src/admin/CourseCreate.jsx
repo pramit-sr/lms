@@ -105,11 +105,12 @@ function CourseCreate() {
             <div className="space-y-2">
               <label className="block text-lg">Course Image</label>
               <div className="flex items-center justify-center">
-                <img
-                  src={imagePreview ? `${imagePreview}` : "/imgPL.webp"}
-                  alt="Image"
-                  className="w-full max-w-sm h-auto rounded-md object-cover"
-                />
+              <img
+                src={imagePreview ? `${imagePreview}` : "/upload_img.jpg"}
+                alt="Image"
+                className="w-32 h-20 rounded-md object-cover"
+              />
+
               </div>
               <input
                 type="file"

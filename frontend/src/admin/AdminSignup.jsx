@@ -33,6 +33,28 @@ function AdminSignup() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-black to-green-950 text-white">
+      <header className="absolute top-0 left-0 w-full flex justify-between items-center p-5">
+              <div className="flex items-center space-x-2">
+                {/* <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" /> */}
+                <Link to="/" className="text-xl font-bold text-green-400">
+                  KnowledgePlus
+                </Link>
+              </div>
+              <div className="flex items-center space-x-4">
+                {/* <Link
+                  to="/admin/signup"
+                  className="bg-transparent border border-gray-500 py-2 px-4 rounded-md"
+                >
+                  Signup
+                </Link> */}
+                {/* <Link
+                  to="/courses"
+                  className="bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md"
+                >
+                  Join now
+                </Link> */}
+              </div>
+            </header>
       <div className="w-full max-w-md bg-gray-900 p-8 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-2 text-center">Admin Signup</h2>
         <p className="text-center text-gray-400 mb-6">

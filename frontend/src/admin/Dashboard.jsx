@@ -4,6 +4,7 @@ import logo from "../../public/logo.webp";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { BACKEND_URL } from "../utils/utils";
+
 function Dashboard() {
   const handleLogout = async () => {
     try {
@@ -14,46 +15,75 @@ function Dashboard() {
       localStorage.removeItem("admin");
     } catch (error) {
       console.log("Error in logging out ", error);
-      toast.error(error.response.data.errors || "Error in logging out");
+      toast.error(error.response?.data?.errors || "Error in logging out");
     }
   };
-  return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <div className="w-64 bg-gray-100 p-5">
-        <div className="flex items-center flex-col mb-10">
-          <img src={logo} alt="Profile" className="rounded-full h-20 w-20" />
-          <h2 className="text-lg font-semibold mt-4">I'm Admin</h2>
-        </div>
-        <nav className="flex flex-col space-y-4">
-          <Link to="/admin/our-courses">
-            <button className="w-full bg-green-700 hover:bg-green-600 text-white py-2 rounded">
-              Our Courses
-            </button>
-          </Link>
-          <Link to="/admin/create-course">
-            <button className="w-full bg-orange-500 hover:bg-blue-600 text-white py-2 rounded">
-              Create Course
-            </button>
-          </Link>
 
-          <Link to="/">
-            <button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 rounded">
-              Home
-            </button>
-          </Link>
-          <Link to="/admin/login">
-            <button
-              onClick={handleLogout}
-              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded"
-            >
-              Logout
-            </button>
-          </Link>
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="w-[80%] mx-auto">
+
+        {/* Navbar */}
+        <nav className="bg-white-100 shadow-md px-4 py-4 flex items-center justify-between relative">
+          <div className="flex items-center space-x-3">
+            {/* <img src={logo} alt="Logo" className="h-10 w-10 rounded-full" /> */}
+            <h1 className="text-xl font-bold text-green-700">Admin Panel</h1>
+          </div>
+
+          {/* Center Nav */}
+          <ul className="absolute left-1/2 transform -translate-x-1/2 flex gap-6">
+            <li>
+              <Link
+                to="/admin/our-courses"
+                className="text-gray-700 hover:text-green-600 font-medium"
+              >
+                Our Courses
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/admin/create-course"
+                className="text-gray-700 hover:text-orange-500 font-medium"
+              >
+                Create Course
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/"
+                className="text-gray-700 hover:text-red-500 font-medium"
+              >
+                Home
+              </Link>
+            </li>
+          </ul>
+
+          {/* Logout */}
+          <div>
+            <Link to="/admin/login">
+              <button
+                onClick={handleLogout}
+                className="bg-green-700 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg text-sm"
+              >
+                Logout
+              </button>
+            </Link>
+          </div>
         </nav>
-      </div>
-      <div className="flex h-screen items-center justify-center ml-[40%]">
-        Welcome!!!
+
+        {/* Main Welcome Section */}
+        <main className="flex justify-center items-center h-[80vh]">
+          <div className="text-center">
+            {/* <img
+              src={logo}
+              alt="Admin"
+              className="h-28 w-28 rounded-full mx-auto mb-4"
+            /> */}
+            <h2 className="text-2xl font-bold text-green-700">Welcome, Admin!</h2>
+            <p className="text-gray-600 mt-2">Manage your platform with ease.</p>
+          </div>
+        </main>
+
       </div>
     </div>
   );

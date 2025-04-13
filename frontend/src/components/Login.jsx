@@ -38,6 +38,28 @@ function Login() {
   return (
     <div className="bg-gradient-to-r from-black to-green-950 min-h-screen flex flex-col items-center justify-center text-white">
       {/* Login Form */}
+      <header className="absolute top-0 left-0 w-full flex justify-between items-center p-5">
+              <div className="flex items-center space-x-2">
+                {/* <img src={logo} alt="Logo" className="w-10 h-10 rounded-full" /> */}
+                <Link to="/" className="text-xl font-bold text-green-400">
+                  KnowledgePlus
+                </Link>
+              </div>
+              <div className="flex items-center space-x-4">
+                {/* <Link
+                  to="/admin/signup"
+                  className="bg-transparent border border-gray-500 py-2 px-4 rounded-md"
+                >
+                  Signup
+                </Link> */}
+                {/* <Link
+                  to="/courses"
+                  className="bg-green-500 hover:bg-green-600 py-2 px-4 rounded-md"
+                >
+                  Join now
+                </Link> */}
+              </div>
+            </header>
       <div className="bg-gray-900 p-8 rounded-lg shadow-lg w-[500px]">
         <h2 className="text-2xl font-bold mb-4 text-center">
           Welcome to <span className="text-green-500">Knowledgeplus</span>

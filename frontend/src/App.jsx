@@ -44,6 +44,9 @@ function AppContent() {
     "/courses", // ✅ ADD THIS
     "/purchases",
   ].includes(location.pathname);
+ 
+
+
   
   return (
     <>
